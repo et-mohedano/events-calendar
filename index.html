@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario de Eventos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;800&display=swap">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Calendario de Eventos</h1>
+    </header>
+    <!-- Formulario para agregar eventos -->
+    <form id="eventForm">
+      <input type="text" id="eventName" placeholder="Nombre del evento" required>
+      <input type="date" id="eventDate" required>
+      <button type="submit">Agregar Evento</button>
+    </form>
+    <!-- Importar JSON -->
+    <div class="import-section">
+      <input type="file" id="importJSON" accept="application/json">
+    </div>
+    <!-- Vista dinámica de tarjetas de eventos -->
+    <div class="calendar" id="eventList">
+      <p>No hay eventos programados.</p>
+    </div>
+    <!-- Botones para exportar configuraciones -->
+    <div class="buttons">
+      <button id="downloadJSON">Descargar JSON</button>
+      <button id="downloadHTML">Descargar Build para Embeber</button>
+    </div>
+    <!-- Navegación para ver diferentes meses -->
+    <div class="calendar-nav">
+      <button id="prevMonth">&#9664;</button>
+      <span id="currentMonthYear"></span>
+      <button id="nextMonth">&#9654;</button>
+    </div>
+    <!-- Vista del calendario mensual -->
+    <div class="calendar-view" id="calendarView">
+      <!-- Se dibuja el calendario aquí -->
+    </div>
+  </div>
+  
+  <!-- Librería html2canvas (ya no se usa en este build) -->
+  <script src="script.js"></script>
+</body>
+</html>

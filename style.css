@@ -1,0 +1,193 @@
+/* Estilos generales y tipografía */
+body {
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 20px;
+    background: #f0f0f0;
+  }
+  
+  /* Contenedor principal más ancho */
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Encabezado */
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Formulario de eventos */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  form input, form button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    cursor: pointer;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+  }
+  
+  /* Sección de importación */
+  .import-section {
+    margin-bottom: 20px;
+  }
+  
+  /* Vista dinámica de eventos (tarjetas) */
+  .calendar {
+    margin-top: 20px;
+  }
+  
+  .event-card {
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+  }
+  
+  .event-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .event-info {
+    flex: 1;
+  }
+  
+  .event-actions button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  .edit-btn {
+    background: #ffc107;
+    color: #fff;
+  }
+  
+  .delete-btn {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  .save-btn {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .cancel-btn {
+    background: #6c757d;
+    color: #fff;
+  }
+  
+  /* Botones de exportación */
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Navegación del calendario */
+  .calendar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .calendar-nav button {
+    padding: 5px 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  #currentMonthYear {
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+  
+  /* Vista del calendario mensual */
+  .calendar-view {
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  
+  .calendar-view ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+  }
+  
+  .calendar-view ul li {
+    display: flex;
+    flex-direction: column;
+    /* Mantener forma cuadrada con aspect-ratio */
+    aspect-ratio: 1;
+    padding: 1rem;
+    font-weight: 300;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .calendar-view ul li time {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .calendar-view ul li.today {
+    background: #ffffff70;
+  }
+  
+  .calendar-view ul li.today time {
+    font-weight: 800;
+  }
+  
+  /* Responsive */
+  @media(max-width:600px) {
+    form {
+      flex-direction: column;
+    }
+    .buttons {
+      flex-direction: column;
+    }
+  }
+  
